@@ -53,14 +53,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="form">
         <form onSubmit={this.onSubmit}>
           <input
+          placeholder="Search User"
           value={this.state.input}
           onChange={this.onChange}
           type="text"
           />
           <button>Find User</button>
         </form>
+        </div>
         <div className="userCard">
           <img width="400" src={this.state.user.avatar_url} alt={this.state.user.name} />
           <h2>{this.state.user.name}</h2>
